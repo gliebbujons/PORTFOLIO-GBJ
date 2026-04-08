@@ -3,9 +3,10 @@
   --bg: #ffffff;
   --white: #FFFFFF;
   --text: #141414;
-  --muted: #444444;
-  --light: #919191;
-  --border: #E0DEDA;
+  --muted: #707070;
+  --light: #c1c1c1;
+  --border: #e1e1e0;
+  --dark: #373737;
 
   --serif: 'Playfair Display', Georgia, serif;
   --sans: 'Montserrat', system-ui, sans-serif;
