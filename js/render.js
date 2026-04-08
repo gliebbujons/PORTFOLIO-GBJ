@@ -3,15 +3,15 @@
 // ───────────────────────────────────────────────────────────────────────────
 
 const BADGE_LABEL = {
-  arquitectura: { ca: 'Arq.',   en: 'Arch.'  },
-  creativitat:  { ca: 'Creat.', en: 'Creat.' },
-  blog:         { ca: 'Blog',   en: 'Blog'   }
+  arquitectura: { ca: 'Arq.', en: 'Arch.' },
+  creativitat: { ca: 'Creat.', en: 'Creat.' },
+  blog: { ca: 'Blog', en: 'Blog' }
 };
 
 const READ_LABEL = {
   arquitectura: { ca: 'Veure projecte →', en: 'View project →' },
-  creativitat:  { ca: 'Veure projecte →', en: 'View project →' },
-  blog:         { ca: 'Llegir →',         en: 'Read →'         }
+  creativitat: { ca: 'Veure projecte →', en: 'View project →' },
+  blog: { ca: 'Llegir →', en: 'Read →' }
 };
 
 const PLACEHOLDER_SVG = `
@@ -30,13 +30,13 @@ function formatDate(isoDate, lang) {
 }
 
 function buildCard(post, lang) {
-  const title  = post.title[lang] || post.title.ca;
-  const desc   = post.desc[lang]  || post.desc.ca;
-  const badge  = (BADGE_LABEL[post.category] || {})[lang] || post.category;
-  const label  = (READ_LABEL[post.category]  || {})[lang] || '→';
-  const date   = formatDate(post.date, lang);
-  const href   = `pages/${post.category}/${post.slug}/${lang === 'en' ? 'en.html' : 'ca.html'}`;
-  const imgEl  = post.cover
+  const title = post.title[lang] || post.title.ca;
+  const desc = post.desc[lang] || post.desc.ca;
+  const badge = (BADGE_LABEL[post.category] || {})[lang] || post.category;
+  const label = (READ_LABEL[post.category] || {})[lang] || '→';
+  const date = formatDate(post.date, lang);
+  const href = `pages/${post.category}/${post.slug}/${lang === 'en' ? 'en.html' : 'ca.html'}`;
+  const imgEl = post.cover
     ? `<img class="card-img" src="${post.cover}" alt="${title}">`
     : PLACEHOLDER_SVG;
 
@@ -58,12 +58,12 @@ function buildCard(post, lang) {
 function renderGrid(targetId, options) {
   const { category = null, limit = null } = options || {};
   const lang = localStorage.getItem('gbj-lang') || 'ca';
-  const el   = document.getElementById(targetId);
+  const el = document.getElementById(targetId);
   if (!el || !window.POSTS) return;
 
   let posts = [...window.POSTS].sort((a, b) => new Date(b.date) - new Date(a.date));
   if (category) posts = posts.filter(p => p.category === category);
-  if (limit)    posts = posts.slice(0, limit);
+  if (limit) posts = posts.slice(0, limit);
 
   if (posts.length === 0) {
     const msg = lang === 'en' ? 'Content coming soon.' : 'Aviat hi haurà contingut.';
@@ -86,8 +86,8 @@ function renderAll() {
   }
   // Index page — 3 separate sections, 3 posts each
   renderGrid('posts-arq', { category: 'arquitectura', limit: 3 });
-  renderGrid('posts-cre', { category: 'creativitat',  limit: 3 });
-  renderGrid('posts-blo', { category: 'blog',         limit: 3 });
+  renderGrid('posts-cre', { category: 'creativitat', limit: 3 });
+  renderGrid('posts-blo', { category: 'blog', limit: 3 });
 }
 
 window.renderAll = renderAll;
