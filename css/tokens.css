@@ -3,19 +3,20 @@
   --bg: #ffffff;
   --white: #FFFFFF;
   --text: #141414;
-  --muted: #767676;
-  --light: #ADADAD;
+  --muted: #444444;
+  --light: #919191;
   --border: #E0DEDA;
 
   --serif: 'Playfair Display', Georgia, serif;
   --sans: 'Montserrat', system-ui, sans-serif;
+
 
   --max: 1100px;
   --pad: 32px;
   --gap: 24px;
 }
 
-@media (max-width: 680px) {
+@media (max-width: 750px) {
   :root {
     --pad: 20px;
   }

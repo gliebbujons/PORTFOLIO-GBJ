@@ -123,7 +123,7 @@
 }
 
 .post-content {
-  max-width: 680px;
+  max-width: 750px;
   font-size: 1rem;
   line-height: 1.78;
 }
@@ -168,6 +168,27 @@
 
 .post-content strong {
   font-weight: 500;
+}
+
+/* ── Lists (Llistes de punts) ────────────────── */
+.post-content ul {
+  list-style-type: disc;
+  padding-left: 24px;
+  margin-bottom: 22px;
+}
+
+.post-content li {
+  margin-bottom: 8px;
+}
+
+.post-content ul.col-list {
+  columns: 2;
+  column-gap: 32px;
+}
+
+.post-content ul.col-list li {
+  break-inside: avoid;
+  /* Evita que un punt es talli per la meitat a la següent columna */
 }
 
 /* ── Image & Media Grids ─────────────────────── */
