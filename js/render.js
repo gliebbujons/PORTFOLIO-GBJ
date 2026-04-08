@@ -56,12 +56,12 @@ function buildCard(post, lang) {
 }
 
 function renderGrid(targetId, options) {
-  const { category = null, limit = null } = options || {};
+  const { category = null, limit = null, isCarousel = false } = options || {};
   const lang = localStorage.getItem('gbj-lang') || 'ca';
   const el = document.getElementById(targetId);
   if (!el || !window.POSTS) return;
 
-  let posts = [...window.POSTS].sort((a, b) => new Date(b.date) - new Date(a.date));
+  let posts = [...window.POSTS].sort((a, b) => new Date(b.pubDate || b.date) - new Date(a.pubDate || a.date));
   if (category) posts = posts.filter(p => p.category === category);
   if (limit) posts = posts.slice(0, limit);
 
@@ -71,7 +71,8 @@ function renderGrid(targetId, options) {
     return;
   }
 
-  el.innerHTML = `<ul class="grid">${posts.map(p => buildCard(p, lang)).join('')}</ul>`;
+  const listClass = isCarousel ? 'card-carousel' : 'grid';
+  el.innerHTML = `<ul class="${listClass}">${posts.map(p => buildCard(p, lang)).join('')}</ul>`;
   el.querySelectorAll('[data-href]').forEach(card => {
     card.addEventListener('click', () => location.href = card.dataset.href);
   });
@@ -84,6 +85,10 @@ function renderAll() {
     const cat = document.body.dataset.category || null;
     renderGrid('posts-grid', { category: cat });
   }
+
+  // Index page — General recent (Carousel)
+  renderGrid('posts-recents', { limit: 6, isCarousel: true });
+
   // Index page — 3 separate sections, 3 posts each
   renderGrid('posts-arq', { category: 'arquitectura', limit: 3 });
   renderGrid('posts-cre', { category: 'creativitat', limit: 3 });

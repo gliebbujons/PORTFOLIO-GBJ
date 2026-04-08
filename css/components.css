@@ -269,6 +269,39 @@
   margin-bottom: 20px;
 }
 
+/* ── Card Carousel ──────────────────────────── */
+.card-carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: var(--gap, 24px);
+  padding-bottom: 24px;
+  margin-top: 16px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+  scroll-snap-type: x mandatory;
+}
+
+.card-carousel::-webkit-scrollbar {
+  height: 6px;
+}
+
+.card-carousel::-webkit-scrollbar-thumb {
+  background: var(--border);
+}
+
+.card-carousel .card {
+  min-width: 280px;
+  max-width: 320px;
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+
+@media (max-width: 680px) {
+  .card-carousel .card {
+    min-width: 75vw;
+  }
+}
+
 /* ── Card ────────────────────────────────────── */
 .card {
   background: var(--white);
