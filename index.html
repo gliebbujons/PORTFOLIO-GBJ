@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glieb Bujons</title>
+  <meta name="description" content="Web personal de GBJ. Projectes d'arquitectura, projectes creatius i articles." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <header class="site-header">
+    <nav class="nav wrap">
+      <a href="index.html" class="nav-logo">GBJ</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="arquitectura.html" data-ca="Arquitectura" data-en="Architecture">Arquitectura</a></li>
+        <li><a href="creativitat.html" data-ca="Creativitat" data-en="Creative Work">Creativitat</a></li>
+        <li><a href="blog.html" data-ca="Blog" data-en="Blog">Blog</a></li>
+        <li class="lang">
+          <button data-lang="ca" class="active">CA</button>
+          <button data-lang="en">EN</button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ── HERO ──────────────────────────────────── -->
+    <section class="hero hero-home">
+      <div class="hero-bg">
+        <!-- Substitueix img src="" per la foto de portada real -->
+        <img src="imgs/main.jpg" alt="Portada de fons">
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="wrap">
+        <p class="eyebrow" data-ca="Portfolio &amp; Blog personal" data-en="Portfolio &amp; Personal journal">Portfolio
+          &amp; Blog personal</p>
+        <h1>
+          <span data-ca="Glieb Bujons" data-en="Glieb Bujons">Glieb Bujons</span><br>
+        </h1>
+      </div>
+    </section>
+
+    <!-- ── INTRO (imatge + bio) ───────────────────── -->
+    <section class="intro-section wrap">
+
+      <!-- Imatge: substitueix src="" per la teva foto quan en tinguis -->
+      <div class="intro-portrait">
+        <!-- <img src="img/retrat.jpg" alt="GBJ"> -->
+        <span class="intro-portrait-placeholder" data-ca="Foto" data-en="Photo">Foto</span>
+      </div>
+
+      <div class="intro-text">
+        <h2 data-ca="Hola, soc GBJ" data-en="Hi, I'm GBJ">Hola, soc GBJ</h2>
+        <p data-ca="Arquitecte i projectista amb interès en l'espai públic, la creativitat material i el pensament crític sobre el territori. Aquí documento projectes, experimento amb idees i escric sobre allò que em mou."
+          data-en="Architect and designer with an interest in public space, material creativity and critical thinking about territory. Here I document projects, experiment with ideas and write about what moves me.">
+          Arquitecte i projectista amb interès en l'espai públic, la creativitat material i el pensament crític sobre el
+          territori. Aquí documento projectes, experimento amb idees i escric sobre allò que em mou.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- ── ÚLTIMES PUBLICACIONS per categoria ────── -->
+    <div class="wrap">
+
+      <!-- Arquitectura -->
+      <section class="cat-section">
+        <div class="section-head">
+          <span class="section-label" data-ca="Arquitectura" data-en="Architecture">Arquitectura</span>
+          <a href="arquitectura.html" class="section-more" data-ca="Veure'n més →" data-en="See more →">Veure'n més
+            →</a>
+        </div>
+        <div id="posts-arq"></div>
+      </section>
+
+      <!-- Creativitat -->
+      <section class="cat-section">
+        <div class="section-head">
+          <span class="section-label" data-ca="Creativitat" data-en="Creative Work">Creativitat</span>
+          <a href="creativitat.html" class="section-more" data-ca="Veure'n més →" data-en="See more →">Veure'n més →</a>
+        </div>
+        <div id="posts-cre"></div>
+      </section>
+
+      <!-- Blog -->
+      <section class="cat-section">
+        <div class="section-head">
+          <span class="section-label">Blog</span>
+          <a href="blog.html" class="section-more" data-ca="Veure'n més →" data-en="See more →">Veure'n més →</a>
+        </div>
+        <div id="posts-blo"></div>
+      </section>
+
+    </div>
+
+  </main>
+
+  <footer class="site-footer"></footer>
+
+  <script src="data/posts.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+/* ── Global Structure ───────────────────────── */
+body {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  min-height: 100vh;
+}
+
+main {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.site-footer {
+  grid-column: 2;
+  grid-row: 2;
+  align-self: end;
+}
+
+/* ── Layout ─────────────────────────────────── */
+.wrap {
+  width: calc(100% - (var(--pad) * 2));
+  max-width: var(--max);
+  margin: 0 auto;
+}
+
+/* ── Grid ────────────────────────────────────── */
+.grid-section { padding-top: 56px; padding-bottom: 56px; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: var(--gap);
+}
+
+@media (max-width: 680px) {
+  body {
+    display: block;
+  }
+  .grid { grid-template-columns: 1fr; }
+}

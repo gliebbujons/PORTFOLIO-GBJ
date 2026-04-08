@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — GBJ</title>
+  <meta name="description" content="Articles i reflexions de GBJ." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body data-category="blog">
+
+  <header class="site-header">
+    <nav class="nav wrap">
+      <a href="index.html" class="nav-logo">GBJ</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="arquitectura.html" data-ca="Arquitectura" data-en="Architecture">Arquitectura</a></li>
+        <li><a href="creativitat.html" data-ca="Creativitat" data-en="Creative Work">Creativitat</a></li>
+        <li><a href="blog.html" data-ca="Blog" data-en="Blog">Blog</a></li>
+        <li class="lang">
+          <button data-lang="ca" class="active">CA</button>
+          <button data-lang="en">EN</button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero wrap">
+      <div class="cat-mark"></div>
+      <p class="eyebrow" data-ca="Articles i reflexions" data-en="Articles &amp; Reflections">Articles i reflexions</p>
+      <h1>Blog</h1>
+      <p data-ca="Textos sobre arquitectura, cultura material, espai i allò que em fa pensar."
+        data-en="Texts on architecture, material culture, space and what makes me think.">
+        Textos sobre arquitectura, cultura material, espai i allò que em fa pensar.
+      </p>
+    </section>
+
+    <section class="grid-section wrap">
+      <!-- Tots els articles del blog es carreguen aquí automàticament -->
+      <div id="posts-grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"></footer>
+
+  <script src="data/posts.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

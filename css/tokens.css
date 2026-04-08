@@ -1,0 +1,22 @@
+/* ── Tokens ─────────────────────────────────── */
+:root {
+  --bg: #fbfbfb;
+  --white: #FFFFFF;
+  --text: #141414;
+  --muted: #767676;
+  --light: #ADADAD;
+  --border: #E0DEDA;
+
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans: 'Inter', system-ui, sans-serif;
+
+  --max: 1100px;
+  --pad: 32px;
+  --gap: 24px;
+}
+
+@media (max-width: 680px) {
+  :root {
+    --pad: 20px;
+  }
+}

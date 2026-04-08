@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ca" data-lang-self="ca">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TÍTOL — GBJ</title>
+  <meta name="description" content="DESCRIPCIÓ CURTA" />
+  <link rel="stylesheet" href="../../../css/style.css" />
+</head>
+
+<body>
+
+  <header class="site-header">
+    <nav class="nav wrap">
+      <a href="../../../index.html" class="nav-logo">GBJ</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <!-- Afegeix class="active" al link de la categoria correcta -->
+        <li><a href="../../../arquitectura.html">Arquitectura</a></li>
+        <li><a href="../../../creativitat.html">Creativitat</a></li>
+        <li><a href="../../../blog.html">Blog</a></li>
+        <li class="lang">
+          <button data-lang="ca" class="active">CA</button>
+          <button data-lang="en">EN</button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="wrap">
+
+      <header class="post-header">
+        <div class="post-meta">
+          <!-- Badge: "Arq." / "Creat." / "Blog" -->
+          <span class="badge">CATEGORIA</span>
+          <span class="post-date-label">MES ANY</span>
+        </div>
+        <h1>TÍTOL DEL POST</h1>
+        <p class="post-intro">Subtítol o descripció breu del projecte o article.</p>
+      </header>
+
+      <!-- Imatge de portada (opcional) -->
+      <!-- <img class="post-cover" src="cover.jpg" alt="TÍTOL"> -->
+
+      <article class="post-content">
+
+        <p>Paràgraf d'introducció...</p>
+
+        <h2>Secció automàtica o Exemples</h2>
+        <p>Si busques donar format de forma fàcil copia i enganxa el codi següent, o treu-li els comentaris
+          <code>&lt;!-- --&gt;</code> al document HTML original:</p>
+
+        <!-- EXEMPLE 1: Columnes de Fotos (2 imatges costat a costat) -->
+        <!--
+      <div class="col-2">
+        <img src="foto1.jpg" alt="Foto meitat">
+        <img src="foto2.jpg" alt="Foto meitat">
+      </div>
+      -->
+
+        <!-- EXEMPLE 2: Carrusel Horitzontal -->
+        <!--
+      <div class="post-carousel">
+        <img src="foto1.jpg" alt="Carrusel 1">
+        <img src="foto2.jpg" alt="Carrusel 2">
+        <img src="foto3.jpg" alt="Carrusel 3">
+      </div>
+      -->
+
+        <!-- EXEMPLE 3: Cita o Reflexió destacada -->
+        <!--
+      <blockquote>
+        Això és un text destacat en cursiva i amb una línia al costat que li dona caràcter més reflexiu.
+      </blockquote>
+      -->
+
+        <!-- EXEMPLE 4: Imatge amb peu de pàgina -->
+        <!--
+      <div class="post-figure">
+        <img src="foto_gran.jpg" alt="Imatge sencera">
+        <p class="post-caption">Figura 1. Vista de l'interior del pati.</p>
+      </div>
+      -->
+
+      </article>
+
+      <!-- Canvia el link i el text de tornada segons la categoria -->
+      <a href="../../../arquitectura.html" class="post-back">← Arquitectura</a>
+
+    </div>
+  </main>
+
+  <footer class="site-footer"></footer>
+
+  <script src="../../../js/main.js"></script>
+</body>
+
+</html>
