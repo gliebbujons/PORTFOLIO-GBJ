@@ -27,7 +27,7 @@ window.POSTS = [
     date: '2024-05-02',
     title: { ca: "De l'Aïllament a la Sensibilitat", en: 'From Enclosure to Fragility' },
     desc: { ca: "El contrast entre l'aïllament i la transparència a través del recorregut.", en: 'Contrast between enclosure and openness trough the journey.' },
-    cover: ''
+    cover: 'imgs/post/museu.jpg'
   },
 
   // Exemple — descomenta i edita quan tinguis el primer post real:

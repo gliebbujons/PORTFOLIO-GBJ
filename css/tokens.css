@@ -1,6 +1,6 @@
 /* ── Tokens ─────────────────────────────────── */
 :root {
-  --bg: #fbfbfb;
+  --bg: #ffffff;
   --white: #FFFFFF;
   --text: #141414;
   --muted: #767676;
@@ -8,7 +8,7 @@
   --border: #E0DEDA;
 
   --serif: 'Playfair Display', Georgia, serif;
-  --sans: 'Inter', system-ui, sans-serif;
+  --sans: 'Montserrat', system-ui, sans-serif;
 
   --max: 1100px;
   --pad: 32px;

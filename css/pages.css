@@ -56,6 +56,7 @@
     grid-template-columns: 1fr;
     gap: 28px;
   }
+
   .intro-portrait {
     aspect-ratio: 4/3;
     max-height: 280px;
@@ -67,7 +68,7 @@
   padding: 48px 0 0;
 }
 
-.cat-section + .cat-section {
+.cat-section+.cat-section {
   padding-top: 48px;
 }
 
@@ -134,10 +135,25 @@
   margin: 40px 0 14px;
 }
 
-.post-content p   { margin-bottom: 22px; }
-.post-content img { width: 100%; margin: 32px 0; display: block; }
-.post-content a   { color: var(--text); border-bottom: 1px solid var(--border); padding-bottom: 1px; }
-.post-content a:hover { border-bottom-color: var(--text); }
+.post-content p {
+  margin-bottom: 22px;
+}
+
+.post-content img {
+  width: 100%;
+  margin: 32px 0;
+  display: block;
+}
+
+.post-content a {
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1px;
+}
+
+.post-content a:hover {
+  border-bottom-color: var(--text);
+}
 
 /* ── Typography & Emphasis ───────────────────── */
 .post-content blockquote {
@@ -150,7 +166,9 @@
   font-size: 1.15rem;
 }
 
-.post-content strong { font-weight: 500; }
+.post-content strong {
+  font-weight: 500;
+}
 
 /* ── Image & Media Grids ─────────────────────── */
 .post-content .col-2,
@@ -160,18 +178,25 @@
   margin: 32px 0;
 }
 
-.post-content .col-2 { grid-template-columns: 1fr 1fr; }
-.post-content .col-3 { grid-template-columns: 1fr 1fr 1fr; }
+.post-content .col-2 {
+  grid-template-columns: 1fr 1fr;
+}
+
+.post-content .col-3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
 
 .post-content .col-2 img,
 .post-content .col-3 img {
-  margin: 0; 
+  margin: 0;
   height: 100%;
   object-fit: cover;
 }
 
 @media (max-width: 600px) {
-  .post-content .col-3 { grid-template-columns: 1fr; }
+  .post-content .col-3 {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ── Carousel (Horizontal Scroll) ────────────── */
@@ -189,13 +214,15 @@
 .post-carousel::-webkit-scrollbar {
   height: 6px;
 }
+
 .post-carousel::-webkit-scrollbar-thumb {
   background: var(--border);
 }
 
 .post-carousel img {
   margin: 0;
-  max-width: 85%; /* Shows a peek of the next one */
+  max-width: 85%;
+  /* Shows a peek of the next one */
   flex-shrink: 0;
   scroll-snap-align: start;
 }
@@ -204,9 +231,11 @@
 .post-figure {
   margin: 32px 0;
 }
+
 .post-figure img {
   margin: 0 0 12px 0;
 }
+
 .post-caption {
   font-size: 0.8rem;
   color: var(--light);
@@ -218,13 +247,17 @@
 .post-video {
   position: relative;
   width: 100%;
-  padding-bottom: 56.25%; /* 16:9 ratio */
+  padding-bottom: 56.25%;
+  /* 16:9 ratio */
   margin: 32px 0;
 }
+
 .post-video iframe {
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   border: 0;
 }
 
@@ -237,4 +270,23 @@
   border-top: 1px solid var(--border);
 }
 
-.post-back:hover { color: var(--text); }
+.post-back:hover {
+  color: var(--text);
+}
+
+/* ── Modificadors (Classes útils per posts específics) ───────── */
+
+/* Capçalera fosca (negra) */
+.post-header.dark-header {
+  background-color: var(--text);
+  color: var(--bg);
+  /* Franja que ocupa tota l'amplada de la pantalla */
+  box-shadow: 0 0 0 100vmax var(--text);
+  clip-path: inset(0 -100vmax);
+  border-bottom: none;
+}
+
+.post-header.dark-header .post-intro,
+.post-header.dark-header .post-date-label {
+  color: #a0a0a0;
+}

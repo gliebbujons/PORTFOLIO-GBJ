@@ -56,13 +56,14 @@ function buildCard(post, lang) {
 }
 
 function renderGrid(targetId, options) {
-  const { category = null, limit = null, isCarousel = false } = options || {};
+  const { category = null, excludeCategory = null, limit = null, isCarousel = false } = options || {};
   const lang = localStorage.getItem('gbj-lang') || 'ca';
   const el = document.getElementById(targetId);
   if (!el || !window.POSTS) return;
 
   let posts = [...window.POSTS].sort((a, b) => new Date(b.pubDate || b.date) - new Date(a.pubDate || a.date));
   if (category) posts = posts.filter(p => p.category === category);
+  if (excludeCategory) posts = posts.filter(p => p.category !== excludeCategory);
   if (limit) posts = posts.slice(0, limit);
 
   if (posts.length === 0) {
@@ -87,7 +88,7 @@ function renderAll() {
   }
 
   // Index page — General recent (Carousel)
-  renderGrid('posts-recents', { limit: 6, isCarousel: true });
+  renderGrid('posts-recents', { excludeCategory: 'blog', limit: 6, isCarousel: true });
 
   // Index page — 3 separate sections, 3 posts each
   renderGrid('posts-arq', { category: 'arquitectura', limit: 3 });

@@ -86,3 +86,7 @@ Si desitges activar-los o moure'ls, només els has d'eliminar les dates `<!--` d
     Escull un bloc de text el qual voldràs ressaltar com alguna cosa cèlebre o pròpia escrivint la tag universal `<blockquote> Tota la raó... </blockquote>`
 *   **4. Fotografies Documentades:**
     Emprant la classe `<div class="post-figure">` obtindràs la certesa de posar un `<p class="post-caption">Figura A...</p>` perquè aquesta explicació s'arreli com text súper miniaturitzat al seu centre-inferior de l'objecte visual.
+
+--
+
+## 6. Info a l'hora a recordar a l'hora de configurar coses
