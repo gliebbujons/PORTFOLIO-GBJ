@@ -4,7 +4,7 @@
 
 const BADGE_LABEL = {
   arquitectura: { ca: 'Arq.', en: 'Arch.' },
-  creativitat: { ca: 'Creat.', en: 'Creat.' },
+  creativitat: { ca: 'Proj. Cre.', en: 'Creat.' },
   blog: { ca: 'Blog', en: 'Blog' }
 };
 
